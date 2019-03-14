@@ -31,6 +31,16 @@ int main(){
 		std::cout << "Origem\n";
 		return 0;
 	}
+
+	if(x == 0 && y !=  0){
+		std::cout << "Eixo X\n";
+		return 0;
+	}
+
+	if(x != 0 && y == 0){
+		std::cout << "Eixo Y\n";
+		return 0;
+	}
 	return 0;
 
 }
