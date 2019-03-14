@@ -1,46 +1,27 @@
 #include <iostream>
-#include <iomanip>
 
 using namespace std;
 
 int main(){
-	float x, y;
-	std::cin >> x >> y;
+	float y, x;
 
-	//testa primeiro quadrante:
-	if(x > 0 && y > 0){
-		std::cout << "Q1\n";
-		return 0;
-	}
-	//testa segundo quadrante:
-	if(x < 0 && y > 0){
-		std::cout << "Q2\n";
-		return 0;
-	}
-	//testa terceiro quadrante:
-	if(x < 0 && y < 0){
-		std::cout << "Q3\n";
-		return 0;
-	}
-	//testa quarto quadrante:
-	if(x > 0 && y < 0){
-		std::cout << "Q4\n";
-		return 0;
-	}
-	if(x == 0 && y == 0){
-		std::cout << "Origem\n";
-		return 0;
+	cin >> x >> y;
+
+	if( x == 0.0 && y == 0.0){
+		cout << "Origem\n";
+	}else if(x == 0.0){
+		cout << "Eixo Y\n";
+	}else if(y == 0.0){
+		cout << "Eixo X\n";
+	}else if(x < 0.0 && y < 0.0){
+		cout << "Q3\n";
+	}else if(x > 0.0 && y < 0.0){
+		cout << "Q4\n";
+	}else if(x > 0.0 && y > 0.0){
+		cout << "Q1\n";
+	}else if(x < 0.0 && y > 0.0){
+		cout << "Q2\n";
 	}
 
-	if(x == 0 && y !=  0){
-		std::cout << "Eixo X\n";
-		return 0;
-	}
-
-	if(x != 0 && y == 0){
-		std::cout << "Eixo Y\n";
-		return 0;
-	}
 	return 0;
-
 }
